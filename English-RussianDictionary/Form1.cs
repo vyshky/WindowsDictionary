@@ -55,7 +55,7 @@ namespace English_RussianDictionary
 
         private void btnUrl_Click(object sender, EventArgs e)
         {
-            string url = "https://github.com/";
+            string url = "https://github.com/vyshky/WindowsDictionary";
             try
             {
                 Process.Start(url);
@@ -96,9 +96,5 @@ namespace English_RussianDictionary
             nameLableDictionari.Text = nameDictionary.Text;
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
