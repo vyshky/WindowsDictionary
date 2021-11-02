@@ -4,4 +4,4 @@
 Привет мир	Hello World;Привет	Hello;Мир	World;дом		Home;
 земля	Earth;
 перевод	Translation;
-ривет мир	Hello World;привет	Hello;мир	World;
+привет мир	Hello World;привет	Hello;мир	World;
