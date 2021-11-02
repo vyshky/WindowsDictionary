@@ -11,12 +11,11 @@ namespace English_RussianDictionary
     {
         private string directory = @"dictionary";
         private TranslationManager _manager;
+        string fullPath = Environment.CurrentDirectory;
         public Form1()
         {
             InitializeComponent();
-            string path = $@"{directory}\English.dsl";
-            string path2 = $@"{directory}\Russian.dsl";
-            path = path2;
+            string path = $@"{fullPath}\{directory}\Russian.dsl";
 
             if (!Directory.Exists(directory)) Directory.CreateDirectory(directory);
             if (!File.Exists(path)) using (File.Create(path)) ;
@@ -85,14 +84,16 @@ namespace English_RussianDictionary
 
         private void btcCreateDictionary_Click(object sender, EventArgs e)
         {
-            string path = $@"{directory}\{nameDictionary.Text}.dsl";
+            string path = $@"{fullPath}\{directory}";
             if (!Directory.Exists(directory)) Directory.CreateDirectory(directory);
-            if (!File.Exists(path)) using (File.Create(path)) ;
+            if (!File.Exists(path)) using (File.Create(@$"{path}\{textBox3.Text}")) ;
         }
 
         private void chengeDictionary_Click(object sender, EventArgs e)
         {
-            _manager = new TranslationManager(nameDictionary.Text);
+            string path = $@"{fullPath}\{directory}\{nameDictionary.Text}";
+            _manager = new TranslationManager(path);
+            _manager.Open();
             nameLableDictionari.Text = nameDictionary.Text;
         }
 
