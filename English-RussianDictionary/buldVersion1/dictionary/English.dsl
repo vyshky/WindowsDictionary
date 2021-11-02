@@ -1,1 +1,1 @@
-Дом	Home;
+Home	Дом;Earth	Земля;Translation;	ПереводHello World	Привет мир;Hello	Привет;World	Мир;home	дом;earth	земля;translation	перевод;hello world	привет мир;hello	привет;world;	мир;	

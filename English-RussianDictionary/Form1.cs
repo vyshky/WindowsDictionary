@@ -10,12 +10,12 @@ namespace English_RussianDictionary
     public partial class Form1 : Form
     {
         private string directory = @"dictionary";
-        private TranslationManager _manager;
         string fullPath = Environment.CurrentDirectory;
+        private TranslationManager _manager;
         public Form1()
         {
             InitializeComponent();
-            string path = $@"{fullPath}\{directory}\Russian.dsl";
+            string path = $@"{fullPath}\{directory}\russian.dsl";
 
             if (!Directory.Exists(directory)) Directory.CreateDirectory(directory);
             if (!File.Exists(path)) using (File.Create(path)) ;
